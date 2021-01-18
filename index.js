@@ -46,7 +46,7 @@ const openWeixinDevTools = () => {
     fs.writeFileSync(path.resolve(WEIXIN_PRESET_PATH, './project.config.json'), writeFileStr, { flag: 'wx' })
   } catch (error) { }
   // 打开小程序项目
-  const openDevToolsShell = `cli open --project ${WEIXIN_PRESET_PATH} --color=always`
+  const openDevToolsShell = `./cli open --project ${WEIXIN_PRESET_PATH} --color=always`
   shell.cd(WEIXIN_DEVTOOLS_PATH)
   // 打开完毕后, 运行编译工具
   shell.exec(openDevToolsShell, () => {
